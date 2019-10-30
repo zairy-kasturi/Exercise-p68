@@ -1,0 +1,54 @@
+// ConsoleApplication12.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	//declare
+	int num1, sqrt = 0, num2, totalodd = 0, totaleven = 0;
+
+	//ask input
+	cout << "plz enter 2 inputs :" << endl;
+	cin >> num1 >> num2;
+
+	cout << "\n\n" << endl;
+
+	//summary of question 
+	cout << "********************" << endl;
+	cout << "summary of quetions " << endl;
+	cout << "********************" << endl;
+
+
+	//find odd numbers
+	cout << "odd number between " << num1 << " and " << num2 << " is  :" << endl;
+	for (int i = num1; num1 <= num2;num1++) {
+		if (num1 % 2 == 0) {
+			totaleven += num1;
+		}
+		else {
+			cout << num1 << "\t";
+			totalodd += num1;
+			sqrt += num1 * num1;
+		}
+	
+	}
+	//find sum of even numbers
+	cout << "\nthe sum of even number :\n" << totaleven << endl;
+
+
+	//ask squares
+	cout << "the value of squares between 1 and 10 : " << endl;
+	for (int i = 1; i <= 10; i++) {
+		cout << i << " \t=\t " << (i*i) << endl;
+	}
+
+	//sum of odd number from square from num1 & num2
+	cout << "sum of the square of the odd number :\n" << sqrt << endl;
+
+
+}
+
+
