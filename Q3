@@ -1,0 +1,37 @@
+#include "pch.h"
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+
+	int floor, room, ocu, unocu;
+	double percentage, room2 = 0, ocu2 = 0;
+	//ask many floor
+	cout << "How many floor ? : ";
+	cin >> floor;
+
+	cout << "\t\t" << "REPORT FOR HOTEL" << "\t\t";
+	for (int i = 1; i <= floor; i++) {
+		//ask how many room on the floor
+		cout << "\nnumber  of room on the " << i << " floor : ";
+		cin >> room;
+		room2 += room;
+		//ask how many room
+		cout << "\nNumber of room occupied : ";
+		cin >> ocu;
+		ocu2 += ocu;
+		//how many unoccupied
+		unocu = room - ocu;
+		cout << "\nNumber of room unoccupied : " << room - ocu << endl;
+	}
+	//output:percentage 
+	percentage = (ocu2 / room2) * 100;
+	cout << fixed << setprecision(2);
+	cout << "The percentage of room that are occupied : " << percentage << "%" << endl;
+
+
+
+}
+
